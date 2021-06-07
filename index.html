@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="assets/webfontkit-20210416-084920/stylesheet.css" type="text/css" charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>balise</title>
+  </head>
+  <body>
+
+    <main>
+      <header>
+        <h1>BALISE <br>PERCEPTRICE <br>DE VAGUE</h1>
+        <h2 class="intro">Ce projet nait d’une envie de capturer l’image des vagues sous forme de donnée numérique, pour ensuite pouvoir les
+          interpréter.<br><br>Voici donc le processus de création de cette balise d’enregistrement.
+        </h2>
+      </header>
+
+      <div id="balise_1" class="test">
+
+        <h3 id="test1">&thinsp;</h3>
+
+        <div>
+          <section class="design">
+            <div class="drp_txt">
+              <button type="button" class="collapsible">
+                <svg viewBox="0 0 100 100">
+                 <circle id="curve" cy="50" cx="50" r="25"/>
+                 <text x="0">
+                   <textPath xlink:href="#curve">
+                     CONCEPTION
+                   </textPath>
+                 </text>
+                </svg>
+              </button>
+              <p class="content">La forme de cette bouée s'insprire des bouées de balisage cylindrique.
+                Ayant une partie submergée elles ont alors une zone parfaitement aligner avec le niveau de l'eau (ce qui m'intersse pour les données que je compte energesitrer).
+                La jonction entre le corp et le couvercle ce fait a l'aide d'un joint/cole etanchéifiant.
+                et la mise sous tenssion du dispositif ce fait par le bouchon qui sert aussi de point d'encrage pour la balise.</p>
+            </div>
+            <img class="show" id="modelA" src="assets/svg/cube.svg" alt="">
+            <span>
+              <img id="baliseM1" src="assets/svg/form11.svg"/>
+              <video src="assets/video/video.mov" loop autoplay poster="assets/video/poster.png"></video>
+              <div class="view"></div>
+            </span>
+          </section>
+
+          <section class="electronique">
+            <div class="drp_txt">
+              <button type="button" class="collapsible">
+                <svg viewBox="0 0 100 100">
+                 <circle id="curve" cy="50" cx="50" r="25"/>
+                 <text x="0">
+                   <textPath side="left" xlink:href="#curve">
+                     ELECTRONIQUE
+                   </textPath>
+                 </text>
+                </svg>
+              </button>
+              <p class="content">La forme de cette bouée s'insprire des bouées de balisage cylindrique.
+                Ayant une partie submergée elles ont alors une zone parfaitement aligner avec le niveau de l'eau (ce qui m'intersse pour les données que je compte energesitrer).
+                La jonction entre le corp et le couvercle ce fait a l'aide d'un joint/cole etanchéifiant.
+                et la mise sous tenssion du dispositif ce fait par le bouchon qui sert aussi de point d'encrage pour la balise.</p>
+            </div>
+            <span>
+              <div class="drawing">
+                <p class="tooltiptext">Tooltip text</p>
+                <svg id="protoAsideA" width="238" height="347" viewBox="0 0 238 347" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M217.5 33.5H9.5V312H217.5V33.5Z" stroke="white"/>
+                  <g id="esp32">
+                    <desc>esp32</desc>
+                    <rect x="55.5" y="209.5" width="168" height="83" rx="3.5"/>
+                    <rect x="76.5" y="226.5" width="56" height="48" rx="2.5"/>
+                    <circle cx="125.5" cy="269.5" r="1.5"/>
+                    <rect x="209.5" y="224.5" width="12" height="8" rx="0.5"/>
+                    <rect x="208.5" y="270.5" width="12" height="8" rx="0.5"/>
+                    <circle cx="216" cy="229" r="3"/>
+                    <circle cx="215" cy="275" r="3"/>
+                    <rect x="210.5" y="240.5" width="18" height="22" rx="0.5"/>
+                    <rect x="56.5" y="225.5" width="20" height="55" rx="1.5"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M58.5 232.5C58.5 231.948 58.9477 231.5 59.5 231.5H74C74.5523 231.5 75 231.948 75 232.5C75 233.052 74.5523 233.5 74 233.5H60.5V238H74C74.5523 238 75 238.448 75 239C75 239.552 74.5523 240 74 240H60.5V244.5H67.5C68.0523 244.5 68.5 244.948 68.5 245.5V254C68.5 254.552 68.0523 255 67.5 255H60.5V259.5H67.5C68.0523 259.5 68.5 259.948 68.5 260.5V268C68.5 268.552 68.0523 269 67.5 269H60.5V274H71V266C71 265.448 71.4477 265 72 265C72.5523 265 73 265.448 73 266V275C73 275.552 72.5523 276 72 276H59.5C58.9477 276 58.5 275.552 58.5 275V268C58.5 267.448 58.9477 267 59.5 267H66.5V261.5H59.5C58.9477 261.5 58.5 261.052 58.5 260.5V254C58.5 253.448 58.9477 253 59.5 253H66.5V246.5H59.5C58.9477 246.5 58.5 246.052 58.5 245.5V232.5Z" stroke-linecap="round" stroke-linejoin="round"/>
+                    <rect x="176" y="240" width="16" height="17" rx="2"/>
+                    <circle cx="61" cy="215" r="3.5"/>
+                    <circle cx="218" cy="215" r="3.5"/>
+                    <circle cx="217" cy="288" r="3.5"/>
+                    <circle cx="61" cy="288" r="3.5"/>
+                  </g>
+                  <g id="sdCard">
+                    <desc>sd card reader</desc>
+                    <path d="M145.5 56.5H150V203H56V56.5H60V46.5H64.4378C66.8912 46.5 69.0975 47.9937 70.0087 50.2717L72.5 56.5H128L130.094 50.5179C130.936 48.1114 133.207 46.5 135.757 46.5H145.5V56.5Z"/>
+                    <path d="M145.5 56.5H150V203H56V56.5M145.5 56.5V46.5H135.757C133.207 46.5 130.936 48.1114 130.094 50.5179L128 56.5M145.5 56.5H128M128 56.5H72.5M72.5 56.5L70.0087 50.2717C69.0975 47.9937 66.8912 46.5 64.4378 46.5H60V56.5H56M72.5 56.5H56"/>
+                    <circle cx="64.5" cy="62.5" r="2"/>
+                    <circle cx="139.5" cy="62.5" r="2"/>
+                    <circle cx="143.5" cy="194.5" r="3"/>
+                    <circle cx="65.5" cy="194.5" r="3"/>
+                  </g>
+                  <g id="speaker">
+                    <desc>speaker</desc>
+                    <circle cx="105.5" cy="168.5" r="40.5" stroke-width="2"/>
+                    <circle cx="105" cy="169" r="34.5"/>
+                    <circle cx="105" cy="169" r="27.5"/>
+                    <circle cx="105.5" cy="168.5" r="7"/>
+                  </g>
+                  <g id="mic">
+                    <desc>microphone</desc>
+                    <path d="M208.5 83.5C208.5 69.1 196.667 62.8333 190.5 61.5C190.167 62.5 189.15 64.5 186.75 64.5C184.35 64.5 183.333 62.5 183 61.5C177.667 63.3333 165.5 69 165.5 83.5C165.5 96.5 176.667 102.333 183 103.5C183 102.667 183.95 101 186.75 101C189.55 101 190.5 102.667 190.5 103.5C196.333 102.833 208.5 97.9 208.5 83.5Z"/>
+                    <path d="M180.5 66C176.167 68 168 72.5 168 82.5C168 94.5 176.5 98 180.5 100.5" stroke-width="2"/>
+                    <path d="M193 100.5C197.333 98.5 205.5 94.5 205.5 84C205.5 71.5 197 68.5 193 66" stroke-width="2"/>
+                    <circle cx="187.5" cy="82.5" r="2"/>
+                  </g>
+                  <g id="presure">
+                    <desc>pressure sensor</desc>
+                    <path d="M207.5 106H152L151.5 146.5L207.5 146V106Z"/>
+                    <path d="M185.5 111.5H172.5C171.948 111.5 171.5 111.948 171.5 112.5V119C171.5 119.552 171.948 120 172.5 120H185.5C186.052 120 186.5 119.552 186.5 119V112.5C186.5 111.948 186.052 111.5 185.5 111.5Z"/>
+                    <circle cx="199.5" cy="114.5" r="5.5" stroke-width="2"/>
+                    <circle cx="173.5" cy="113.5" r="0.5"/>
+                    <circle cx="184.5" cy="117.5" r="0.5"/>
+                  </g>
+                  <g id="gyro">
+                    <desc>gyroscope</desc>
+                    <path d="M215 153H151V200H215V153Z"/>
+                    <circle cx="158" cy="160" r="4.5"/>
+                    <circle cx="207" cy="160" r="4.5"/>
+                    <rect x="176.5" y="170.5" width="12" height="12" rx="0.5"/>
+                    <path d="M212 171.5H203.5M203.5 171.5L204.5 170M203.5 171.5L204.5 173" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M207 174.5C208 173.5 209.6 171.1 208 169.5C206.4 167.9 207 168.5 207 168.5M207 168.5L207 170M207 168.5L209 168.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M208.5 185.5V177.5M208.5 177.5L210.5 178.5M208.5 177.5L207 178.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M205.5 180.5C206.333 181.667 208.6 183.6 211 182C211.361 181.76 211.5 181.5 212 181M212 181V183M212 181H210" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M212 174L209 176M209 174L212 176" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M206 168H204M204 168L203 167M204 168L203 169" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <g id="incl">
+                    <desc>inclinaison sensor</desc>
+                    <rect x="12.5" y="239.5" width="41" height="56" rx="0.5"/>
+                    <rect x="15" y="271" width="4" height="10" rx="1"/>
+                    <circle cx="39.5" cy="267.5" r="7"/>
+                    <circle cx="39.5" cy="268.5" r="2"/>
+                    <circle cx="19" cy="246" r="3.5"/>
+                    <circle cx="48" cy="246" r="3.5"/>
+                  </g>
+                </svg>
+                <svg id="protoAsideB" width="228" height="318" viewBox="0 0 228 318" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="7.5" y="207.5" width="18" height="22" rx="0.5" stroke="black"/>
+                  <path d="M222 9H14V287.5H222V9Z" stroke="black"/>
+                  <rect x="0.5" y="246.5" width="30" height="2" rx="0.5" fill="#C4C4C4" stroke="black"/>
+                  <rect x="0.5" y="254.5" width="30" height="2" rx="0.5" fill="#C4C4C4" stroke="black"/>
+                  <rect x="15" y="244" width="7" height="6" rx="1"/>
+                  <rect x="15" y="253" width="7" height="6" rx="1" fill="black"/>
+                  <rect x="133.5" y="111.5" width="54" height="42" rx="1.5" fill="white" stroke="black"/>
+                  <circle cx="158" cy="120" r="3.5" stroke="black"/>
+                  <circle cx="158" cy="144" r="3.5" stroke="black"/>
+                  <path d="M144.5 126C147 121.5 158 121.329 158 128V133.5V135.5C157 140 144.5 139.512 144.5 134.5L144.5 127.25L144.5 126Z" fill="white"/>
+                  <path d="M144.5 127.25C144.5 130.161 144.5 129.149 144.5 134.5C144.5 139.512 157 140 158 135.5C158 134.539 158 133.955 158 133.5M144.5 127.25C144.5 126.897 144.5 126.487 144.5 126C147 121.5 158 121.329 158 128C158 131.991 158 132.296 158 133.5M144.5 127.25H146V133.5H147V127.25H148.5V133.5H149.5V127.25H151.5V133.5H152.5V127.25H154V133.5H155V127.25H156.5V133.5H158" stroke="black" stroke-width="0.6"/>
+                  <path d="M184.5 132C189 130.667 199 128.6 203 131C208 134 212 139 209.5 144M199 158C198.833 159.667 197.5 162 193.5 158C188.5 153 188.5 140 185.5 139.5" stroke="black"/>
+                  <path d="M207.5 143L207.5 143C209.5 144 211.5 145 211.5 146C211.5 146.595 211.5 147.367 211.289 148C211.146 148.431 210.905 148.797 210.5 149C209.933 149.283 209.206 149.727 208.5 150.332C207.96 150.794 207.433 151.35 207 152C206.874 152.188 206.749 152.353 206.625 152.5C206.05 153.184 205.518 153.485 205.228 154C205.084 154.256 205 154.565 205 155C205 155.474 204.792 156.015 204.5 156.537C204.051 157.339 203.404 158.096 203 158.5C200.667 158.5 196.3 157.9 197.5 155.5C198.25 154 198.5 153.375 198.75 153C199 152.625 199.25 152.5 200 152C200.291 151.806 200.628 151.451 200.982 151C201.424 150.439 201.893 149.73 202.338 149C202.755 148.317 203.15 147.615 203.48 147C203.681 146.627 203.857 146.286 204 146C204.202 145.462 204.551 144.738 205 144.12C205.663 143.207 206.546 142.523 207.5 143Z" fill="white"/>
+                  <path d="M205 144.12C204.551 144.738 204.202 145.462 204 146C203.857 146.286 203.681 146.627 203.48 147M205 144.12C205.663 143.207 206.546 142.523 207.5 143C209.5 144 211.5 145 211.5 146C211.5 146.595 211.5 147.367 211.289 148M205 144.12C206.86 144.58 210.721 146 211.289 148M211.289 148C211.146 148.431 210.905 148.797 210.5 149C209.933 149.283 209.206 149.727 208.5 150.332M203.48 147C205.154 147.055 208.5 147.797 208.5 150.332M203.48 147C203.15 147.615 202.755 148.317 202.338 149M208.5 150.332C207.96 150.794 207.433 151.35 207 152C206.874 152.188 206.749 152.353 206.625 152.5M202.338 149C203.642 149.167 206.326 150.1 206.625 152.5M202.338 149C201.893 149.73 201.424 150.439 200.982 151M206.625 152.5C206.05 153.184 205.518 153.485 205.228 154M200.982 151C200.628 151.451 200.291 151.806 200 152C199.25 152.5 199 152.625 198.75 153M200.982 151C202.474 151.667 205.411 153.2 205.228 154M205.228 154C205.084 154.256 205 154.565 205 155C205 155.474 204.792 156.015 204.5 156.537M198.75 153C198.5 153.375 198.25 154 197.5 155.5C196.3 157.9 200.667 158.5 203 158.5C203.404 158.096 204.051 157.339 204.5 156.537M198.75 153C200.424 153.358 203.918 154.567 204.5 156.537" stroke="black"/>
+                  <circle cx="184.5" cy="132.5" r="3.5" fill="black"/>
+                  <circle cx="184.5" cy="122.5" r="2.5" fill="black"/>
+                  <circle cx="185" cy="140" r="2" fill="black"/>
+                </svg>
+              </div>
+              <div class="codeBox">
+                <div>
+                  <input class="codeBTN active" type="button" value="balise">
+                  <input class="codeBTN" type="button" value="left">
+                  <input class="codeBTN" type="button" value="right">
+                </div>
+                <textarea readonly name="name"></textarea>
+              </div>
+            </span>
+          </section>
+
+          <section class="photos">
+            <div class="drp_txt">
+              <button type="button" class="collapsible">
+                <svg viewBox="0 0 100 100">
+                 <circle id="curve" cy="50" cx="50" r="25"/>
+                 <text x="0">
+                   <textPath xlink:href="#curve">
+                     MISE A L'EAU
+                   </textPath>
+                 </text>
+                </svg>
+              </button>
+              <p class="content">La forme de cette bouée s'insprire des bouées de balisage cylindrique.
+                Ayant une partie submergée elles ont alors une zone parfaitement aligner avec le niveau de l'eau (ce qui m'intersse pour les données que je compte energesitrer).
+                La jonction entre le corp et le couvercle ce fait a l'aide d'un joint/cole etanchéifiant.
+                et la mise sous tenssion du dispositif ce fait par le bouchon qui sert aussi de point d'encrage pour la balise.</p>
+            </div>
+            <div class="imgGrid 1">
+              <img src="assets/img1/1.jpg" alt="">
+              <img src="assets/img1/2.jpg" alt="">
+              <img src="assets/img1/3.jpg" alt="">
+              <img src="assets/img1/4.jpg" alt="">
+              <img src="assets/img1/5.jpg" alt="">
+              <img src="assets/img1/6.jpg" alt="">
+              <img src="assets/img1/7.jpg" alt="">
+              <img src="assets/img1/8.jpg" alt="">
+              <img src="assets/img1/9.jpg" alt="">
+              <img src="assets/img1/10.jpg" alt="">
+              <img src="assets/img1/11.jpg" alt="">
+              <img src="assets/img1/12.jpg" alt="">
+              <img src="assets/img1/13.jpg" alt="">
+              <img src="assets/img1/14.jpg" alt="">
+              <img src="assets/img1/15.jpg" alt="">
+            </div>
+            <div class="infoIMG">
+              <span>
+                <h3>27/02/2021</h3>
+                <h3>11:04</h3>
+                <h3>47,244290 -2,175880</h3>
+              </span>
+              <img src="assets/img/locat1.png" alt="">
+            </div>
+          </section>
+
+          <section class="resultat">
+            <div class="drp_txt">
+              <button type="button" class="collapsible">
+                <svg viewBox="0 0 100 100">
+                 <circle id="curve" cy="50" cx="50" r="25"/>
+                 <text x="0">
+                   <textPath xlink:href="#curve">
+                     RESULTAT
+                   </textPath>
+                 </text>
+                </svg>
+              </button>
+              <p class="content">La forme de cette bouée s'insprire des bouées de balisage cylindrique.
+                Ayant une partie submergée elles ont alors une zone parfaitement aligner avec le niveau de l'eau (ce qui m'intersse pour les données que je compte energesitrer).
+                La jonction entre le corp et le couvercle ce fait a l'aide d'un joint/cole etanchéifiant.
+                et la mise sous tenssion du dispositif ce fait par le bouchon qui sert aussi de point d'encrage pour la balise.</p>
+            </div>
+            <div>
+              <audio preload=”metadata” id="audio_1">
+                <source src="assets/wav/file_2.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_2">
+                <source src="assets/wav/file_3.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_3">
+                <source src="assets/wav/file_4.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_4">
+                <source src="assets/wav/file_5.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_5">
+                <source src="assets/wav/file_6.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_6">
+                <source src="assets/wav/file_7.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_7">
+                <source src="assets/wav/file_8.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_8">
+                <source src="assets/wav/file_9.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_9">
+                <source src="assets/wav/file_10.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_10">
+                <source src="assets/wav/file_11.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_11">
+                <source src="assets/wav/file_12.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_12">
+                <source src="assets/wav/file_13.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_13">
+                <source src="assets/wav/file_14.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_14">
+                <source src="assets/wav/file_15.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_15">
+                <source src="assets/wav/file_16.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_16">
+                <source src="assets/wav/file_17.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_17">
+                <source src="assets/wav/file_18.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_18">
+                <source src="assets/wav/file_19.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_19">
+                <source src="assets/wav/file_20.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_20">
+                <source src="assets/wav/file_21.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_21">
+                <source src="assets/wav/file_22.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_22">
+                <source src="assets/wav/file_23.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_23">
+                <source src="assets/wav/file_24.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_24">
+                <source src="assets/wav/file_25.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_25">
+                <source src="assets/wav/file_26.wav" type="audio/wav">
+              </audio>
+
+            </div>
+            <div class="trace">
+              <span><img id="audioIMG_1" src="assets/svg/audio1/path_1.svg" alt=""><p>&thinsp;11h06</p></span>
+              <span><img id="audioIMG_2" src="assets/svg/audio1/path_2.svg" alt=""><p>&thinsp;11h16</p></span>
+              <span><img id="audioIMG_3" src="assets/svg/audio1/path_3.svg" alt=""><p>&thinsp;11h26</p></span>
+              <span><img id="audioIMG_4" src="assets/svg/audio1/path_4.svg" alt=""><p>&thinsp;11h36</p></span>
+              <span><img id="audioIMG_5" src="assets/svg/audio1/path_5.svg" alt=""><p>&thinsp;11h46</p></span>
+              <span><img id="audioIMG_6" src="assets/svg/audio1/path_6.svg" alt=""><p>&thinsp;11h56</p></span>
+              <span><img id="audioIMG_7" src="assets/svg/audio1/path_7.svg" alt=""><p>&thinsp;12h06</p></span>
+              <span><img id="audioIMG_8" src="assets/svg/audio1/path_8.svg" alt=""><p>&thinsp;12h16</p></span>
+              <span><img id="audioIMG_9" src="assets/svg/audio1/path_9.svg" alt=""><p>&thinsp;12h26</p></span>
+              <span><img id="audioIMG_10" src="assets/svg/audio1/path_10.svg" alt=""><p>&thinsp;12h36</p></span>
+              <span><img id="audioIMG_11" src="assets/svg/audio1/path_11.svg" alt=""><p>&thinsp;12h46</p></span>
+              <span><img id="audioIMG_12" src="assets/svg/audio1/path_12.svg" alt=""><p>&thinsp;12h56</p></span>
+              <span><img id="audioIMG_13" src="assets/svg/audio1/path_13.svg" alt=""><p>&thinsp;13h06</p></span>
+              <span><img id="audioIMG_14" src="assets/svg/audio1/path_14.svg" alt=""><p>&thinsp;13h16</p></span>
+              <span><img id="audioIMG_15" src="assets/svg/audio1/path_15.svg" alt=""><p>&thinsp;13h26</p></span>
+              <span><img id="audioIMG_16" src="assets/svg/audio1/path_16.svg" alt=""><p>&thinsp;13h36</p></span>
+              <span><img id="audioIMG_17" src="assets/svg/audio1/path_17.svg" alt=""><p>&thinsp;13h46</p></span>
+              <span><img id="audioIMG_18" src="assets/svg/audio1/path_18.svg" alt=""><p>&thinsp;13h56</p></span>
+              <span><img id="audioIMG_19" src="assets/svg/audio1/path_19.svg" alt=""><p>&thinsp;14h06</p></span>
+              <span><img id="audioIMG_20" src="assets/svg/audio1/path_20.svg" alt=""><p>&thinsp;14h16</p></span>
+              <span><img id="audioIMG_21" src="assets/svg/audio1/path_21.svg" alt=""><p>&thinsp;14h26</p></span>
+              <span><img id="audioIMG_22" src="assets/svg/audio1/path_22.svg" alt=""><p>&thinsp;14h36</p></span>
+              <span><img id="audioIMG_23" src="assets/svg/audio1/path_23.svg" alt=""><p>&thinsp;14h46</p></span>
+              <span><img id="audioIMG_24" src="assets/svg/audio1/path_24.svg" alt=""><p>&thinsp;14h56</p></span>
+              <span><img id="audioIMG_25" src="assets/svg/audio1/path_25.svg" alt=""><p>&thinsp;15h06</p></span>
+              <span><img id="audioIMG_26" src="assets/svg/audio1/path_26.svg" alt=""><p>&thinsp;15h16</p></span>
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+
+      <div id="balise_2" class="test">
+
+        <h3 id="test2">PROTOTYPE VERSION_N°2</h3>
+
+        <div>
+
+          <section class="design">
+            <div class="drp_txt">
+              <button type="button" class="collapsible">
+                <svg viewBox="0 0 100 100">
+                 <circle id="curve" cy="50" cx="50" r="25"/>
+                 <text x="0">
+                   <textPath xlink:href="#curve">
+                     CONCEPTION
+                   </textPath>
+                 </text>
+                </svg>
+              </button>
+              <p class="content">La forme de cette bouée s'insprire des bouées de balisage cylindrique.
+                Ayant une partie submergée elles ont alors une zone parfaitement aligner avec le niveau de l'eau (ce qui m'intersse pour les données que je compte energesitrer).
+                La jonction entre le corp et le couvercle ce fait a l'aide d'un joint/cole etanchéifiant.
+                et la mise sous tenssion du dispositif ce fait par le bouchon qui sert aussi de point d'encrage pour la balise.</p>
+            </div>
+            <span>
+              <svg id="main-container" width="545" height="454" viewBox="0 0 545 454" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M286.019 340.625C278.63 336.361 266.65 336.361 259.262 340.625C251.873 344.89 251.873 351.804 259.262 356.068C266.65 360.333 278.63 360.333 286.019 356.068C293.407 351.804 293.407 344.89 286.019 340.625Z" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M492.44 241.747L492.52 242.547V243.267L492.6 243.667V244.067L492.68 244.387V244.707L492.76 245.107L492.84 245.427V245.747L492.92 246.067L493 246.387L493.08 246.707L493.16 247.027L493.32 247.267" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M46.52 255.347L47.32 253.587L48.2 251.827L49.08 249.987L49.88 248.227L50.76 246.387L51.64 244.547L52.52 242.707L53.4 240.867" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M215.72 355.907L216.2 355.747L216.68 355.587L217.16 355.427L217.56 355.267L218.04 355.107L218.44 355.027L218.92 354.867L219.32 354.787L219.72 354.627L220.12 354.547L220.52 354.467L220.92 354.387L221.32 354.307L221.64 354.227L222.44 354.067L223.08 353.907L223.8 353.827L224.44 353.667L225.08 353.587L225.72 353.507L226.36 353.427L227.56 353.267L228.76 353.027L229.88 352.867L231.08 352.707L232.2 352.547L233.32 352.307L234.36 352.147L236.6 351.827L240.92 351.187L245.16 350.467L249.48 349.827L251.56 349.507L253.64 349.187" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M290.44 344.787H291L291.56 344.867L292.2 344.947H292.76L293.88 345.107L295 345.267L296.04 345.427L297.08 345.587L298.12 345.827L299.16 345.987L300.12 346.227L301.08 346.547L302.04 346.787L303 347.107L303.88 347.347L304.76 347.667L305.56 347.987L306.36 348.387L307.16 348.707L307.88 349.027L308.6 349.347L309.24 349.747L309.88 350.067L310.52 350.467L311.08 350.787L311.72 351.107L312.28 351.507L312.84 351.827L313.4 352.147L313.96 352.467L315.08 353.107L316.12 353.747" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M337 438.387L336.12 438.867L335.32 439.267L334.44 439.667L333.56 440.067L332.6 440.467L331.72 440.867L330.84 441.187L329.88 441.507L329 441.827L328.12 442.067L327.24 442.387L326.36 442.547L325.96 442.707L325.56 442.787L325.16 442.867L324.76 443.027L324.36 443.107L323.96 443.187L323.64 443.267L323.24 443.347L322.92 443.427H322.52L322.2 443.507L321.88 443.587L321.56 443.667H321.32L321 443.747L320.76 443.827H320.52H320.2L319.72 443.907L318.76 444.067L314.92 444.707L299.4 447.107L268.44 451.907H268.12L267.8 451.987H267.48L267.08 452.067L266.68 452.147H266.28L265.88 452.227L265.4 452.307H264.92L264.44 452.387H263.96L263.48 452.467H262.92L262.36 452.547H261.8H261.24L260.68 452.627H260.04H259.48H258.84H258.2H257.56H256.92L256.28 452.547H255.64H254.92L254.28 452.467H253.64L252.92 452.387L252.28 452.307L251.56 452.227L250.92 452.147L250.2 452.067L249.56 451.987L248.84 451.907L248.2 451.747L247.56 451.667L246.84 451.507L246.2 451.427L245.56 451.267L244.92 451.107L244.28 450.947L243.64 450.787L243.08 450.707L242.44 450.547L241.8 450.307L241.24 450.147L240.68 449.987L240.12 449.827L239.56 449.667L239 449.427L238.52 449.267L238.04 449.107L237.56 448.867L237.08 448.707L236.6 448.547L236.12 448.307L235.72 448.147L235.32 447.987L234.92 447.827L234.52 447.587L234.2 447.427L233.88 447.267L233.48 447.107L233.24 446.947L232.92 446.787L232.6 446.627L232.36 446.467L232.12 446.387L231.88 446.227L231.48 445.987L229.8 445.027L226.36 443.027L219.48 439.107L205.8 431.187L199 427.187L195.56 425.267L193.88 424.227L193.64 424.147L193.4 423.987L193.16 423.827L192.84 423.667L192.6 423.507L192.28 423.347L192.04 423.107L191.72 422.947" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M181.998 399.113C191.492 404.652 205.39 406.849 218.454 404.876" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12.44 300.227L181.96 399.187" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1.55998 284.827C1.55998 290.565 5.483 296.072 12.478 300.153" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M542.296 220.029C543.188 218.151 543.64 216.213 543.64 214.267" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M478.52 354.387L542.28 220.147" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M451.734 369.676C464.799 367.703 475.046 361.86 478.616 354.349" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M218.36 404.947L451.64 369.747" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20.04 221.347L2.83997 257.507" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2.90422 257.465C-0.664953 264.976 2.9845 273.014 12.478 278.553" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12.44 278.627L181.96 377.587" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M181.998 377.513C191.492 383.052 205.39 385.249 218.454 383.276" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M460.676 316.076C450.576 315.519 440.571 317.591 433.391 321.727C426.21 325.863 422.602 331.631 423.549 337.46" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M423.48 337.507L234.44 366.067" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M512.28 207.267L460.6 316.147" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M509.249 206.325C510.235 206.658 511.248 206.963 512.287 207.238" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M461.533 319.404C463.431 319.564 465.238 318.879 465.745 317.808" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M465.64 317.907L518.2 207.267" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M518.225 207.168C518.736 206.089 517.766 204.959 515.971 204.544" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M510.819 203.026C512.434 203.643 514.154 204.163 515.952 204.578" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M25.5847 275.534C24.4416 275.826 23.6198 276.425 23.3867 277.136C23.1536 277.847 23.539 278.579 24.4176 279.093" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M25.5882 275.471C33.2708 273.515 37.3243 268.618 35.1289 263.945C32.9336 259.272 25.1474 256.223 16.8025 256.769" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12.6551 254.005C12.3219 254.709 12.6135 255.463 13.4337 256.018C14.2539 256.572 15.4957 256.855 16.7486 256.773" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12.68 254.067L26.44 225.107" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M521.134 192.47C524.087 194.172 528.873 194.172 531.826 192.47C534.778 190.767 534.778 188.006 531.826 186.304C528.873 184.601 524.087 184.601 521.134 186.304C518.182 188.006 518.182 190.767 521.134 192.47Z" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.3743 269.59C16.3266 271.292 21.1133 271.292 24.0657 269.59C27.0181 267.887 27.0181 265.126 24.0657 263.424C21.1133 261.721 16.3266 261.721 13.3743 263.424C10.4219 265.126 10.4219 267.887 13.3743 269.59Z" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M452.094 338.71C455.047 340.412 459.833 340.412 462.786 338.71C465.738 337.007 465.738 334.246 462.786 332.544C459.833 330.841 455.047 330.841 452.094 332.544C449.142 334.246 449.142 337.007 452.094 338.71Z" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M198.174 377.27C201.127 378.972 205.913 378.972 208.866 377.27C211.818 375.567 211.818 372.806 208.866 371.104C205.913 369.401 201.127 369.401 198.174 371.104C195.222 372.806 195.222 375.567 198.174 377.27Z" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M229.867 368.132C226.556 363.338 219.518 359.726 210.878 358.387C202.238 357.048 193.01 358.139 185.98 361.331" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M180.898 361.173C182.257 361.969 184.431 362.048 185.95 361.355" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M41.16 279.587L180.92 361.187" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M40.9371 276.664C39.7486 277.536 39.8689 278.784 41.2175 279.573" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M40.9818 276.642C46.5245 272.591 48.4283 267.268 46.1183 262.282C43.8083 257.296 37.5553 253.232 29.248 251.316" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M26.9751 248.725C26.4642 249.805 27.4343 250.934 29.2293 251.349" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M35.64 230.467L26.92 248.787" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M461.523 319.437C452.67 318.694 443.729 320.404 437.399 324.051C431.069 327.698 428.093 332.854 429.37 337.962" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M426.563 340.395C428.433 340.111 429.637 339.06 429.361 337.953" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M234.28 369.507L426.52 340.387" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M229.83 368.121C230.54 369.153 232.467 369.716 234.323 369.435" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M234.484 366.029C230.27 360.704 222.158 356.741 212.36 355.221C202.561 353.7 192.099 354.781 183.824 358.169" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M183.8 358.227L46.36 277.987" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M46.4469 277.9C52.3331 273.132 54.2254 267.096 51.6079 261.44C48.9903 255.784 42.1358 251.096 32.9131 248.655" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M32.84 248.707L40.2 233.107" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M441.64 344.867L225.08 377.667" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M441.682 344.875C442.902 344.69 443.884 344.167 444.304 343.479C444.723 342.79 444.525 342.026 443.776 341.439" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M467.474 327.716C460.694 324.858 451.31 325.283 445.387 328.715C439.464 332.148 438.777 337.559 443.77 341.452" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M467.437 327.723C468.446 328.15 469.753 328.262 470.933 328.024C472.113 327.785 473.015 327.226 473.345 326.528" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M532.44 201.907L473.32 326.547" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M532.545 201.888C532.878 201.184 532.586 200.43 531.766 199.876C530.946 199.321 529.704 199.038 528.451 199.121" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M514.111 196.109C517.784 198.355 523.077 199.472 528.397 199.124" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M181.72 370.947L24.36 279.107" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M181.778 370.933C182.664 371.452 183.938 371.683 185.177 371.549C186.417 371.415 187.461 370.934 187.964 370.265" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M220.421 375.241C221.325 370.427 215.995 365.955 207.876 364.714C199.758 363.473 191.285 365.836 187.933 370.276" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M220.382 375.23C220.248 375.949 220.733 376.661 221.679 377.133C222.626 377.606 223.913 377.778 225.122 377.595" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M451.734 348.076C464.799 346.103 475.046 340.26 478.616 332.749" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M478.52 332.787L542.28 198.547" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M542.296 198.429C545.865 190.918 542.215 182.879 532.722 177.341" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M532.68 177.427L525.08 172.947" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M218.36 383.347L451.64 348.147" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M253.64 363.187V348.387" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M291.48 357.427V348.387" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M468.52 364.227L402.76 401.267L337 438.387" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M191.72 422.947L146.44 391.987L101.08 360.947L55.8 329.987L10.44 298.947" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1.47998 284.867V263.267" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M423.4 337.507V335.667" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M518.44 213.347V213.267L518.36 213.187V213.107V213.027V212.787" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M429.4 344.787V344.627V344.467" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M40.12 284.227L40.04 284.467V284.547V284.627L39.96 284.707V284.787" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M26.76 255.507V255.667V255.827V255.907L26.68 255.987" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M518.36 212.787V206.627" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M35.64 272.787V266.547" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M40.12 284.227V278.067" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M26.76 255.507V249.347" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M429.4 344.467V338.307" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M440.36 341.827V335.667" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M220.44 376.067V374.227" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M52.68 281.667V266.547" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M543.64 214.307V192.707" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M351.103 301.549C352.016 301.461 352.914 301.325 353.784 301.141" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M354.298 13.0715C352.55 9.90041 347.447 7.74661 341.68 7.74661C335.913 7.74661 330.81 9.90041 329.062 13.0715" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M332.318 16.149C337.488 19.1326 345.871 19.1326 351.042 16.149C356.213 13.1654 356.213 8.32803 351.042 5.34443C345.871 2.36075 337.488 2.36075 332.318 5.34443C327.147 8.32803 327.147 13.1654 332.318 16.149Z" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M345.102 18.1516C347.18 17.2917 348.06 15.7544 347.279 14.3476C346.498 12.9408 344.235 11.9867 341.68 11.9867C339.125 11.9867 336.862 12.9408 336.081 14.3476C335.3 15.7544 336.18 17.2917 338.258 18.1516" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M470.058 266.992C468.31 263.821 463.207 261.667 457.44 261.667C451.673 261.667 446.57 263.821 444.823 266.992" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M448.078 270.069C453.248 273.053 461.631 273.053 466.802 270.069C471.973 267.085 471.973 262.248 466.802 259.264C461.631 256.281 453.248 256.281 448.078 259.264C442.907 262.248 442.907 267.085 448.078 270.069Z" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M460.862 272.072C462.94 271.212 463.82 269.674 463.039 268.268C462.258 266.861 459.995 265.907 457.44 265.907C454.885 265.907 452.622 266.861 451.841 268.268C451.06 269.674 451.94 271.212 454.018 272.072" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M100.378 51.6316C98.6302 48.4605 93.5267 46.3067 87.76 46.3067C81.9933 46.3067 76.8898 48.4605 75.1425 51.6316" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M78.3979 54.709C83.5685 57.6927 91.9516 57.6927 97.1221 54.709C102.293 51.7254 102.293 46.8881 97.1221 43.9045C91.9516 40.9208 83.5685 40.9208 78.3979 43.9045C73.2274 46.8881 73.2274 51.7254 78.3979 54.709Z" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M91.182 56.7115C93.2599 55.8517 94.1395 54.3143 93.3586 52.9075C92.5778 51.5008 90.3151 50.5466 87.76 50.5466C85.2048 50.5466 82.9422 51.5008 82.1613 52.9075C81.3804 54.3143 82.2601 55.8517 84.3379 56.7115" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M539.098 120.752C537.35 117.581 532.247 115.427 526.48 115.427C520.713 115.427 515.61 117.581 513.862 120.752" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M517.118 123.829C522.288 126.813 530.672 126.813 535.842 123.829C541.013 120.845 541.013 116.008 535.842 113.024C530.672 110.041 522.288 110.041 517.118 113.024C511.947 116.008 511.947 120.845 517.118 123.829Z" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M529.902 125.832C531.98 124.972 532.859 123.434 532.079 122.028C531.298 120.621 529.035 119.667 526.48 119.667C523.925 119.667 521.662 120.621 520.881 122.028C520.1 123.434 520.98 124.972 523.058 125.832" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M216.138 305.552C214.39 302.381 209.287 300.227 203.52 300.227C197.753 300.227 192.65 302.381 190.902 305.552" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M194.158 308.629C199.328 311.613 207.712 311.613 212.882 308.629C218.053 305.645 218.053 300.808 212.882 297.824C207.712 294.841 199.328 294.841 194.158 297.824C188.987 300.808 188.987 305.645 194.158 308.629Z" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M206.942 310.632C209.02 309.772 209.9 308.234 209.119 306.828C208.338 305.421 206.075 304.467 203.52 304.467C200.965 304.467 198.702 305.421 197.921 306.828C197.14 308.234 198.02 309.772 200.098 310.632" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M31.3375 197.872C29.5901 194.7 24.4867 192.547 18.72 192.547C12.9533 192.547 7.8498 194.7 6.10242 197.872" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.35789 200.949C14.5284 203.933 22.9115 203.933 28.0821 200.949C33.2526 197.965 33.2526 193.128 28.0821 190.144C22.9115 187.161 14.5284 187.161 9.35789 190.144C4.18734 193.128 4.18734 197.965 9.35789 200.949Z" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22.1421 202.952C24.2199 202.092 25.0995 200.554 24.3187 199.148C23.5378 197.741 21.2751 196.787 18.72 196.787C16.1649 196.787 13.9022 197.741 13.1213 199.148C12.3404 200.554 13.2201 202.092 15.2979 202.952" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1.55998 201.467C1.55998 207.205 5.483 212.712 12.478 216.793" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M542.296 136.749C543.188 134.871 543.64 132.933 543.64 130.987" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M478.52 271.027L542.28 136.787" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M451.734 286.316C464.799 284.343 475.046 278.5 478.616 270.989" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M218.36 321.667L451.64 286.387" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M181.998 315.833C191.492 321.372 205.39 323.569 218.454 321.596" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12.44 216.867L181.96 315.907" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M530.768 125.38C529.656 124.695 528.104 124.307 526.48 124.307C524.856 124.307 523.304 124.695 522.192 125.38" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M461.728 271.54C460.616 270.855 459.064 270.467 457.44 270.467C455.816 270.467 454.264 270.855 453.152 271.54" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M23.0076 202.5C21.8961 201.815 20.3442 201.427 18.72 201.427C17.0957 201.427 15.5438 201.815 14.4323 202.5" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M92.0476 56.2601C90.9361 55.5753 89.3842 55.1868 87.76 55.1868C86.1358 55.1868 84.5839 55.5753 83.4724 56.2601" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M207.808 310.18C206.696 309.495 205.144 309.107 203.52 309.107C201.896 309.107 200.344 309.495 199.232 310.18" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M345.968 17.7C344.856 17.0152 343.304 16.6267 341.68 16.6267C340.056 16.6267 338.504 17.0152 337.392 17.7" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M66.6 52.2266L2.83997 186.547" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M93.4656 36.9375C80.401 38.9103 70.1537 44.753 66.5842 52.2647" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M326.76 1.66678L93.48 36.9468" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M363.202 7.42079C353.707 1.8818 339.81 -0.315103 326.746 1.65768" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M532.68 106.387L363.16 7.42672" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M542.296 127.469C545.865 119.958 542.215 111.919 532.722 106.381" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M478.52 261.827L542.28 127.507" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M451.734 277.036C464.799 275.063 475.046 269.22 478.616 261.709" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M218.36 312.387L451.64 277.107" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M181.998 306.553C191.492 312.092 205.39 314.289 218.454 312.316" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12.44 207.667L181.96 306.627" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2.90422 186.505C-0.664953 194.016 2.9845 202.054 12.478 207.593" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M543.64 131.027V121.747" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1.47998 201.507V192.307" stroke="black" stroke-width="1.36" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+
+          </section>
+
+          <section class="electronique">
+            <div class="drp_txt">
+              <button type="button" class="collapsible">
+                <svg viewBox="0 0 100 100">
+                 <circle id="curve" cy="50" cx="50" r="25"/>
+                 <text x="0">
+                   <textPath xlink:href="#curve">
+                     ELECTRONIQUE
+                   </textPath>
+                 </text>
+                </svg>
+              </button>
+              <p class="content">La forme de cette bouée s'insprire des bouées de balisage cylindrique.
+                Ayant une partie submergée elles ont alors une zone parfaitement aligner avec le niveau de l'eau (ce qui m'intersse pour les données que je compte energesitrer).
+                La jonction entre le corp et le couvercle ce fait a l'aide d'un joint/cole etanchéifiant.
+                et la mise sous tenssion du dispositif ce fait par le bouchon qui sert aussi de point d'encrage pour la balise.</p>
+            </div>
+            <span>
+              <p>meme programe que pour la premiere version</p>
+            </span>
+          </section>
+
+          <section class="photos">
+            <div class="drp_txt">
+              <button type="button" class="collapsible">
+                <svg viewBox="0 0 100 100">
+                 <circle id="curve" cy="50" cx="50" r="25"/>
+                 <text x="0">
+                   <textPath xlink:href="#curve">
+                     PHOTOS
+                   </textPath>
+                 </text>
+                </svg>
+              </button>
+              <p class="content">La forme de cette bouée s'insprire des bouées de balisage cylindrique.
+                Ayant une partie submergée elles ont alors une zone parfaitement aligner avec le niveau de l'eau (ce qui m'intersse pour les données que je compte energesitrer).
+                La jonction entre le corp et le couvercle ce fait a l'aide d'un joint/cole etanchéifiant.
+                et la mise sous tenssion du dispositif ce fait par le bouchon qui sert aussi de point d'encrage pour la balise.</p>
+            </div>
+            <div class="imgGrid 2">
+              <img src="assets/img2/1.jpg" alt="">
+              <img src="assets/img2/2.jpg" alt="">
+              <img src="assets/img2/3.jpg" alt="">
+              <img src="assets/img2/4.jpg" alt="">
+              <img src="assets/img2/5.jpg" alt="">
+              <img src="assets/img2/6.jpg" alt="">
+              <img src="assets/img2/7.jpg" alt="">
+              <img src="assets/img2/8.jpg" alt="">
+              <img src="assets/img2/9.jpg" alt="">
+              <img src="assets/img2/10.jpg" alt="">
+              <img src="assets/img2/11.jpg" alt="">
+              <img src="assets/img2/12.jpg" alt="">
+              <img src="assets/img2/13.jpg" alt="">
+            </div>
+            <div class="infoIMG">
+              <span>
+                <h3>17/04/2021</h3>
+                <h3>09:54</h3>
+                <h3>49,512700 0,064503</h3>
+              </span>
+              <img src="assets/img/locat2.png" alt="">
+            </div>
+          </section>
+
+          <section class="resultat">
+            <div class="drp_txt">
+              <button type="button" class="collapsible">
+                <svg viewBox="0 0 100 100">
+                 <circle id="curve" cy="50" cx="50" r="25"/>
+                 <text x="0">
+                   <textPath xlink:href="#curve">
+                     RESULTAT
+                   </textPath>
+                 </text>
+                </svg>
+              </button>
+              <p class="content">La forme de cette bouée s'insprire des bouées de balisage cylindrique.
+                Ayant une partie submergée elles ont alors une zone parfaitement aligner avec le niveau de l'eau (ce qui m'intersse pour les données que je compte energesitrer).
+                La jonction entre le corp et le couvercle ce fait a l'aide d'un joint/cole etanchéifiant.
+                et la mise sous tenssion du dispositif ce fait par le bouchon qui sert aussi de point d'encrage pour la balise.</p>
+            </div>
+            <div id="chart-wrapper">
+            <canvas id="chart"></canvas>
+            <canvas id="chart1"></canvas>
+          </div>
+          </section>
+        </div>
+
+      </div>
+
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
