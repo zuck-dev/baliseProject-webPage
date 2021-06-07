@@ -1,2 +1,0 @@
-# baliseProject-webPage
-description
