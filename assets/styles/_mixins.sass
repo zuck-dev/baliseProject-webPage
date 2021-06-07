@@ -1,0 +1,19 @@
+@mixin sticky($top)
+  position: sticky
+  top: $top
+
+@mixin theme-colors($light-theme: true, $background: true)
+  @if $background
+    @if $light-theme
+      background-color: $light-background
+      color: $dark-text
+    @else
+      background-color: $dark-background
+      color: $light-text
+  @else
+    @if $light-theme
+      background: none
+      color: $dark-text
+    @else
+      background: none
+      color: $light-text
