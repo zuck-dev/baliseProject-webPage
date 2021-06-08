@@ -57,9 +57,11 @@ for (let i = 0; i < coll.length; i++) {
     if (content.style.maxHeight){
       content.style.maxHeight = null;
       content.style.padding = 0;
+      content.style.border = "none";
     } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+      content.style.maxHeight = "80vh";
       content.style.padding = '1em';
+      content.style.border = "solid black 1px";
     }
   });
 }
@@ -335,11 +337,12 @@ async function chartIt() {
           datalabels: {
             display: false
           },
+          title: {
+            display: true,
+            text: 'Luminosité : perdiode 4h'
+          },
           legend: {
-              display: false,
-              title: {
-                display: false
-              }
+            display: false
           },
         },
         animations: {
@@ -390,11 +393,12 @@ async function chartIt() {
           datalabels: {
             display: false
           },
+          title: {
+            display: true,
+            text: 'Température : perdiode 4h'
+          },
           legend: {
-              display: false,
-              title: {
-                display: false
-              }
+            display: false
           },
         },
         animations: {

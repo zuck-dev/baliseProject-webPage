@@ -59,6 +59,7 @@ header
 .design
   background-color: $white
   span
+    z-index: 1
     height: 100vh
     display: grid
     grid-template-columns: repeat(1, 1fr)
@@ -82,12 +83,15 @@ header
 .show
   padding: 1rem
   @include sticky(0)
+  left: 100vw
+  z-index: 5
 .view
   background: none
   z-index: 4
   height: inherit
   align-items: center
   display: flex
+  justify-content: center
   & *
     background: none
 
@@ -103,8 +107,12 @@ header
     grid-template-columns: repeat(1, 1fr)
     grid-gap: 10px
     .drawing
-      @extend %column
+      @extend %row
       align-items: center
+      justify-content: center
+      @media (max-width: 981px)
+        display: flex
+        flex-direction: column
 textarea
   height: 50vh
   width: 90vw
@@ -140,6 +148,15 @@ textarea
   transform-box: fill-box
 
 .infoIMG
+  h3
+    padding: 1rem
+  font-size: 2em
+  font-weight: 200
+  @media (max-width: 981px)
+    h3
+      padding: 0.5rem
+    font-size: 0.3em
+    font-weight: 600
   border-top: 1px solid $black
   border-bottom: 1px solid $black
   height: 30vh
@@ -147,18 +164,17 @@ textarea
   margin-bottom: 8rem
   @extend %row
   align-items: center
-  justify-content: center
+  justify-content: flex-end
   position: relative
   background-color: $white
-  z-index: -1
+  z-index: 3
+  mix-blend-mode: multiply
   width: 100vw
   img
     height: 100%
     max-width: 100%
   h3
-    padding: 0.5rem
-    font-size: 0.3em
-    font-weight: 600
+    width: 100%
     text-align: center
 .imgGrid
   padding: 1rem
@@ -177,6 +193,7 @@ textarea
     filter: grayscale(100%) brightness(1.2) contrast(0.8)
 .large
   max-width: 90%
+  max-height: 90%
   margin-left: auto
   margin-right: auto
   left: 0
@@ -230,14 +247,16 @@ textarea
   background-color: $color
   z-index: 2
   mix-blend-mode: difference
-// #chart-wrapper
-//   @extend %row
-//   margin: 3rem
+
+#chart-wrapper
+  max-width: 50vw
+  display: flex
+  align-items: center
+  @media (max-width: 981px)
+    flex-direction: column
+    max-width: 100vw
 #chart, #chart1
  margin: 3rem
-//   max-width: 500px
-//   max-height: 500px
-
 circle
   fill: transparent
   stroke: transparent
@@ -251,15 +270,18 @@ text
     -webkit-transform: rotate(360deg),
     transform: rotate(360deg)
 .drp_txt
-  z-index: 4
+  z-index: 5
   @include sticky(0)
 .collapsible
   width: 15rem
   height: 15rem
-  @media (max-width: 981px)
-    width: 5rem
-    height: 5rem
   transform: skew(20deg, 20deg)
+  @media (max-width: 981px)
+    width: 8rem
+    height: 8rem
+    transform: none
+    transform: rotate(0.5turn) translate(-100%, -100%)
+  z-index: 5
   transform-origin: 0 0
   font-weight: 200
   background: none
@@ -289,13 +311,18 @@ text
   transition: 0.2s ease-out
   transform: skew(0deg, 0deg)
 .content
-  margin: 0
+  left: 15rem
+  width: 50vw
+  @media (max-width: 981px)
+    left: 5rem
+    width: 75vw
   position: absolute
   padding: 0
+  top: 10px
   max-height: 0
   overflow: hidden
   transition: max-height 0.2s ease-out
-  background-color: hsla(360, 0%, 0%, 0.9)
+  background-color: rgba($white , 0.9)
   border-radius: 15px
 
 #main-container
