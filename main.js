@@ -256,6 +256,59 @@ audio_trace.forEach(element => {
   });
 });
 
+let btn = document.querySelectorAll('.codeBTN');
+
+btn.forEach(element => {
+  element.addEventListener('click', function() {
+    fetch('assets/code/code.txt')
+      .then(response => response.text())
+      .then(data => {
+        element.parentNode.nextElementSibling.value = data;
+      });
+
+    let current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  })
+});
+
+const svg_g = document.querySelectorAll('#protoAsideA > g');
+
+var tooltiptext = document.querySelector('.tooltiptext');
+
+svg_g.forEach(item => {
+  item.addEventListener("mouseenter", function(e) {
+    console.log(item.left);
+    // NOTE: convert the html collection item.collection into an Array
+    let childs = Array.prototype.slice.call( item.children );
+    // tooltiptext.style.left = `${e.pageX+10}px`;
+    // tooltiptext.style.top = `${e.pageY+10}px`;
+    tooltiptext.innerHTML = item.firstElementChild.textContent;
+    anime({
+      targets: childs,
+      easing: 'easeOutInBounce',
+      duration: 200,
+      zIndex: 4,
+      strokeWidth: 1.1,
+      stroke: '#9400ff',
+      scale: 1.1,
+    });
+  });
+  item.addEventListener("mouseleave", function() {
+    // NOTE: convert the html collection item.collection into an Array
+    let childs = Array.prototype.slice.call( item.children )
+    anime({
+      targets: childs,
+      easing: 'easeOutInBounce',
+      duration: 200,
+      strokeWidth: 1,
+      stroke: '#f9f9f9',
+      scale: 1,
+    });
+  });
+});
+
+
 var animation = anime({
   targets: path,
   strokeDashoffset: [anime.setDashoffset, 0],
@@ -269,10 +322,10 @@ var animation = anime({
 
 getInScreen(animation.play, "#main-container")
 
-const tableau = fetch('assets/csvjson.json')
-   .then(tableau => tableau.text())
-   .then(v => JSON.parse(v))
-   .catch(err => console.log(err))
+// const tableau = fetch('assets/csvjson.json')
+//    .then(tableau => tableau.text())
+//    .then(v => JSON.parse(v))
+//    .catch(err => console.log(err))
 
 tableau.then(v => console.log(v[0]))
 tableau.then(v => v.forEach(element => {

@@ -146,25 +146,36 @@ textarea
   fill: $black
   transform-origin: 50% 50%
   transform-box: fill-box
-
-.infoIMG
-  h3
-    padding: 1rem
+.tooltiptext
+  top: 50px
+  position: absolute
+  color: $white
   font-size: 2em
   font-weight: 200
+  border-radius: 10px
+  border: solid 2px $color
+  padding: 4px
+  box-shadow: 10px 10px 0px $white, -10px -10px 20px darken($black, 10)
+
+.infoIMG
+  height: 35vh
+  h3
+    margin: 0.5rem
+    font-size: 3em
+    font-weight: 200
   @media (max-width: 981px)
+    height: 25vh
     h3
       padding: 0.5rem
-    font-size: 0.3em
-    font-weight: 600
+      font-size: 0.5em
+      font-weight: 600
   border-top: 1px solid $black
   border-bottom: 1px solid $black
-  height: 30vh
-  margin-top: 8rem
-  margin-bottom: 8rem
+  margin-top: 5rem
+  margin-bottom: 5rem
   @extend %row
   align-items: center
-  justify-content: flex-end
+  justify-content: space-between
   position: relative
   background-color: $white
   z-index: 3
@@ -173,8 +184,12 @@ textarea
   img
     height: 100%
     max-width: 100%
-  h3
+  span
+    height: inherit
     width: 100%
+    @extend %column
+    justify-content: center
+  h3
     text-align: center
 .imgGrid
   padding: 1rem
@@ -270,6 +285,7 @@ text
     -webkit-transform: rotate(360deg),
     transform: rotate(360deg)
 .drp_txt
+  width: 0
   z-index: 5
   @include sticky(0)
 .collapsible
