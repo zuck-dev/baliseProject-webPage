@@ -11,8 +11,7 @@ import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js';
 console.log('Hello World');
 
 let pic = document.querySelectorAll('.imgGrid');
-let audio = document.querySelector('.trace');
-let audio_trace = Array.prototype.slice.call( audio.children );
+let audio = document.querySelectorAll('.trace');
 var path = document.querySelectorAll('#main-container > path');
 var spinText = document.querySelectorAll('collapsible');
 
@@ -224,43 +223,47 @@ pic.forEach(item => {
   });
 });
 
-audio_trace.forEach(element => {
-  element.addEventListener('click', function() {
-    let n = element.firstChild.attributes.src.value.slice(23, -4);
-    let sound = document.getElementById('audio_'+n);
-    if (sound.paused == true) {
-      sound.play();
-    } else {
-      sound.pause();
-    }
-
-    let d = document.createElement('div');
-    d.className = 'barT';
-    console.log(element.firstChild);
-    if (element.firstChild.parentNode.childNodes.length > 2) {} else {
-      element.firstChild.parentNode.appendChild(d);
-    }
-
-    function step() {
-      let progress;
+audio.forEach((item, i) => {
+  let audio_trace = Array.prototype.slice.call( item.children );
+  audio_trace.forEach(element => {
+    element.addEventListener('click', function() {
+      let n = element.firstChild.attributes.src.value.slice(23, -4);
       let sound = document.getElementById('audio_'+n);
-      progress = ((sound.currentTime)*element.firstChild.width)/sound.duration;
-      d.style.left = progress -(d.clientWidth/2) + "px";
-      if (progress < element.firstChild.width) {
-        requestAnimationFrame(step);
+      if (sound.paused == true) {
+        sound.play();
+      } else {
+        sound.pause();
       }
-    }
 
-    requestAnimationFrame(step);
+      let d = document.createElement('div');
+      d.className = 'barT';
+      if (element.firstChild.parentNode.childNodes.length > 2) {} else {
+        element.firstChild.parentNode.appendChild(d);
+      }
 
+      function step() {
+        let progress;
+        let sound = document.getElementById('audio_'+n);
+        progress = ((sound.currentTime)*element.firstChild.width)/sound.duration;
+        d.style.left = progress -(d.clientWidth/2) + "px";
+        if (progress < element.firstChild.width) {
+          requestAnimationFrame(step);
+        }
+      }
+
+      requestAnimationFrame(step);
+
+    });
   });
+
 });
 
 let btn = document.querySelectorAll('.codeBTN');
 
 btn.forEach(element => {
   element.addEventListener('click', function() {
-    fetch('assets/code/code.txt')
+    console.log(element.value);
+    fetch(`assets/code/${element.value}.txt`)
       .then(response => response.text())
       .then(data => {
         element.parentNode.nextElementSibling.value = data;
@@ -322,10 +325,10 @@ var animation = anime({
 
 getInScreen(animation.play, "#main-container")
 
-// const tableau = fetch('assets/csvjson.json')
-//    .then(tableau => tableau.text())
-//    .then(v => JSON.parse(v))
-//    .catch(err => console.log(err))
+const tableau = fetch('assets/csvjson.json')
+   .then(tableau => tableau.text())
+   .then(v => JSON.parse(v))
+   .catch(err => console.log(err))
 
 tableau.then(v => console.log(v[0]))
 tableau.then(v => v.forEach(element => {

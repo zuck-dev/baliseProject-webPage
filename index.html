@@ -12,7 +12,7 @@
     <main>
       <header>
         <h1>BALISE <br>PERCEPTRICE <br>DE VAGUE</h1>
-        <h2 class="intro">Ce projet nait d’une envie de capturer l’image des vagues sous forme de donnée numérique, pour ensuite pouvoir les
+        <h2 contenteditable="true" class="intro">Ce projet nait d’une envie de capturer l’image des vagues sous forme de donnée numérique, pour ensuite pouvoir les
           interpréter.<br><br>Voici donc le processus de création de cette balise d’enregistrement.
         </h2>
       </header>
@@ -34,10 +34,7 @@
                  </text>
                 </svg>
               </button>
-              <p class="content">La forme de cette bouée s'insprire des bouées de balisage cylindrique.
-                Ayant une partie submergée elles ont alors une zone parfaitement aligner avec le niveau de l'eau (ce qui m'intersse pour les données que je compte energesitrer).
-                La jonction entre le corp et le couvercle ce fait a l'aide d'un joint/cole etanchéifiant.
-                et la mise sous tenssion du dispositif ce fait par le bouchon qui sert aussi de point d'encrage pour la balise.</p>
+              <p contenteditable="true" class="content">La forme de cette bouée s’inspire des bouées de balisage cylindrique. Avec la partie la plus lourd submergée elles ont alors leurs centre de graviter aligner avec le niveau de l'eau, ce qui lui permet rester stable sur l'eau et de ne pas se retourner. L'assemblage des deux partie supérieure est fait avec de la colle. Et la vise permet un accès pour la mise sous tension du dispositif.</p>
             </div>
             <button id="modelA" class="show" type="button" name="button">
               <img src="assets/svg/cube.svg" alt="">
@@ -61,10 +58,7 @@
                  </text>
                 </svg>
               </button>
-              <p class="content">La forme de cette bouée s'insprire des bouées de balisage cylindrique.
-                Ayant une partie submergée elles ont alors une zone parfaitement aligner avec le niveau de l'eau (ce qui m'intersse pour les données que je compte energesitrer).
-                La jonction entre le corp et le couvercle ce fait a l'aide d'un joint/cole etanchéifiant.
-                et la mise sous tenssion du dispositif ce fait par le bouchon qui sert aussi de point d'encrage pour la balise.</p>
+              <p contenteditable="true" class="content">Pour ce qui est de l’électronique, le programme principal ce trouve sur l'esp32 la carte qui reçois les données des différents capteur. Le programme vient en suite enregistrer sur la carte SD les données des capteurs sous forme de fichier numérique.</p>
             </div>
             <span>
               <div class="drawing">
@@ -166,8 +160,11 @@
               <div class="codeBox">
                 <div>
                   <input class="codeBTN active" type="button" value="balise">
-                  <input class="codeBTN" type="button" value="left">
-                  <input class="codeBTN" type="button" value="right">
+                  <input class="codeBTN" type="button" value="sdfunc">
+                  <input class="codeBTN" type="button" value="gyroscope">
+                  <input class="codeBTN" type="button" value="photoresitance">
+                  <input class="codeBTN" type="button" value="microphone">
+                  <input class="codeBTN" type="button" value="pression">
                 </div>
                 <textarea readonly name="name"></textarea>
               </div>
@@ -186,10 +183,7 @@
                  </text>
                 </svg>
               </button>
-              <p class="content">La forme de cette bouée s'insprire des bouées de balisage cylindrique.
-                Ayant une partie submergée elles ont alors une zone parfaitement aligner avec le niveau de l'eau (ce qui m'intersse pour les données que je compte energesitrer).
-                La jonction entre le corp et le couvercle ce fait a l'aide d'un joint/cole etanchéifiant.
-                et la mise sous tenssion du dispositif ce fait par le bouchon qui sert aussi de point d'encrage pour la balise.</p>
+              <p contenteditable="true" class="content">Après avoir imprimer en 3d le corps de la balise et assembler les composants électronique sur une carte de prototypage il était temps de tester la balise dans l'eau. Je suis alors aller a sur une plage a l'embouchure de la Loire, la marrée basse venue j'ai enterrer une bouteille que servi de point d'encrage. Puis j'ai attendu 24h et a marée basse je suis aller récupéré la balise.</p>
             </div>
             <div class="imgGrid 1">
               <img src="assets/img1/1.jpg" alt="">
@@ -230,10 +224,7 @@
                  </text>
                 </svg>
               </button>
-              <p class="content">La forme de cette bouée s'insprire des bouées de balisage cylindrique.
-                Ayant une partie submergée elles ont alors une zone parfaitement aligner avec le niveau de l'eau (ce qui m'intersse pour les données que je compte energesitrer).
-                La jonction entre le corp et le couvercle ce fait a l'aide d'un joint/cole etanchéifiant.
-                et la mise sous tenssion du dispositif ce fait par le bouchon qui sert aussi de point d'encrage pour la balise.</p>
+              <p contenteditable="true" class="content">Voici donc les enregistrement de cette première balise, malheureusement le programme avait une erreur qui lui faisait écraser les enregistrement des capteur au redémarrage, mais les enregistrement audio était enregistrer d'une manière différente ce qui me permit de l'es récupérer dans leurs entièreté.</p>
             </div>
             <div>
               <audio preload=”metadata” id="audio_1">
@@ -365,10 +356,7 @@
                  </text>
                 </svg>
               </button>
-              <p class="content">La forme de cette bouée s'insprire des bouées de balisage cylindrique.
-                Ayant une partie submergée elles ont alors une zone parfaitement aligner avec le niveau de l'eau (ce qui m'intersse pour les données que je compte energesitrer).
-                La jonction entre le corp et le couvercle ce fait a l'aide d'un joint/cole etanchéifiant.
-                et la mise sous tenssion du dispositif ce fait par le bouchon qui sert aussi de point d'encrage pour la balise.</p>
+              <p contenteditable="true" class="content">Pour cette second version sachant que de l'eau était parvenue a pénétrer dans la première version, j'ai alors décider de modifier la forme pour parvenir a un assemblage plus pratique et surtout plus étanche. Ce prototype est donc composée d'uniquement deux partie connecter a l'aide de vis qui viennent serrez un joint en silicone de salle de bains injecter dans une rainure sur tout le périmètre reliant les deux partie de la balise.</p>
             </div>
             <span>
               <svg id="main-container" width="545" height="454" viewBox="0 0 545 454" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -518,10 +506,7 @@
                  </text>
                 </svg>
               </button>
-              <p class="content">La forme de cette bouée s'insprire des bouées de balisage cylindrique.
-                Ayant une partie submergée elles ont alors une zone parfaitement aligner avec le niveau de l'eau (ce qui m'intersse pour les données que je compte energesitrer).
-                La jonction entre le corp et le couvercle ce fait a l'aide d'un joint/cole etanchéifiant.
-                et la mise sous tenssion du dispositif ce fait par le bouchon qui sert aussi de point d'encrage pour la balise.</p>
+              <p contenteditable="true" class="content">l’électronique est le même que sur le premier prototype, avec une modification du code pour éviter la suppression de fichier. </p>
             </div>
             <span>
               <p>meme programe que pour la premiere version</p>
@@ -540,10 +525,7 @@
                  </text>
                 </svg>
               </button>
-              <p class="content">La forme de cette bouée s'insprire des bouées de balisage cylindrique.
-                Ayant une partie submergée elles ont alors une zone parfaitement aligner avec le niveau de l'eau (ce qui m'intersse pour les données que je compte energesitrer).
-                La jonction entre le corp et le couvercle ce fait a l'aide d'un joint/cole etanchéifiant.
-                et la mise sous tenssion du dispositif ce fait par le bouchon qui sert aussi de point d'encrage pour la balise.</p>
+              <p contenteditable="true" class="content">Nous voila donc un mois et demi plus tard j'ai après plusieurs test dans des bassine la balise me parait prête pour le second test cette fois je me retrouve la l'embouchure de la seine, a adoptant le même protocole que pour la première version je laisse la bouée encrée 24h au même endroit.</p>
             </div>
             <div class="imgGrid 2">
               <img src="assets/img2/1.jpg" alt="">
@@ -586,6 +568,66 @@
                 Ayant une partie submergée elles ont alors une zone parfaitement aligner avec le niveau de l'eau (ce qui m'intersse pour les données que je compte energesitrer).
                 La jonction entre le corp et le couvercle ce fait a l'aide d'un joint/cole etanchéifiant.
                 et la mise sous tenssion du dispositif ce fait par le bouchon qui sert aussi de point d'encrage pour la balise.</p>
+            </div>
+            <div>
+              <audio preload=”metadata” id="audio_1">
+                <source src="assets/wav2/file_2.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_2">
+                <source src="assets/wav2/file_3.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_3">
+                <source src="assets/wav2/file_4.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_4">
+                <source src="assets/wav2/file_5.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_5">
+                <source src="assets/wav2/file_6.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_6">
+                <source src="assets/wav2/file_7.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_7">
+                <source src="assets/wav2/file_8.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_8">
+                <source src="assets/wav2/file_9.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_9">
+                <source src="assets/wav2/file_10.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_10">
+                <source src="assets/wav2/file_11.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_11">
+                <source src="assets/wav2/file_12.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_12">
+                <source src="assets/wav2/file_13.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_13">
+                <source src="assets/wav2/file_14.wav" type="audio/wav">
+              </audio>
+              <audio preload=”metadata” id="audio_14">
+                <source src="assets/wav2/file_15.wav" type="audio/wav">
+              </audio>
+            </div>
+            <div class="trace">
+              <span><img id="audioIMG_1" src="assets/svg/audio2/path_1.svg" alt=""><p>&thinsp;09h54</p></span>
+              <span><img id="audioIMG_2" src="assets/svg/audio2/path_2.svg" alt=""><p>&thinsp;10h09</p></span>
+              <span><img id="audioIMG_3" src="assets/svg/audio2/path_3.svg" alt=""><p>&thinsp;10h24</p></span>
+              <span><img id="audioIMG_4" src="assets/svg/audio2/path_4.svg" alt=""><p>&thinsp;10h39</p></span>
+              <span><img id="audioIMG_5" src="assets/svg/audio2/path_5.svg" alt=""><p>&thinsp;10h54</p></span>
+              <span><img id="audioIMG_6" src="assets/svg/audio2/path_6.svg" alt=""><p>&thinsp;11h09</p></span>
+              <span><img id="audioIMG_7" src="assets/svg/audio2/path_7.svg" alt=""><p>&thinsp;11h24</p></span>
+              <span><img id="audioIMG_8" src="assets/svg/audio2/path_8.svg" alt=""><p>&thinsp;11h39</p></span>
+              <span><img id="audioIMG_9" src="assets/svg/audio2/path_9.svg" alt=""><p>&thinsp;11h54</p></span>
+              <span><img id="audioIMG_10" src="assets/svg/audio2/path_10.svg" alt=""><p>&thinsp;12h09</p></span>
+              <span><img id="audioIMG_11" src="assets/svg/audio2/path_11.svg" alt=""><p>&thinsp;12h24</p></span>
+              <span><img id="audioIMG_12" src="assets/svg/audio2/path_12.svg" alt=""><p>&thinsp;12h39</p></span>
+              <span><img id="audioIMG_13" src="assets/svg/audio2/path_13.svg" alt=""><p>&thinsp;13h54</p></span>
+              <span><img id="audioIMG_14" src="assets/svg/audio2/path_14.svg" alt=""><p>&thinsp;13h09</p></span>
             </div>
             <div id="chart-wrapper">
             <canvas id="chart"></canvas>

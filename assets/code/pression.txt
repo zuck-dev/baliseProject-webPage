@@ -1,0 +1,27 @@
+
+MS5611 MS5611(0x77);   // 0x76 = CSB to VCC; 0x77 = CSB to GND
+
+uint32_t count;
+
+void setupPressure() {
+
+  bool b = MS5611.begin();
+  count = 0;
+  //create file for pressure value
+  writeFile(SD, "/pressure.txt", "CNT\tTEMP\tPRES\n");
+
+}
+
+void loopPressure() {
+
+  int result = MS5611.read();
+  /* Print out the values into the file */
+  appendFile(SD, "/pressure.txt", String(count).c_str());
+  count++;
+  appendFile(SD, "/pressure.txt", "\t");
+  appendFile(SD, "/pressure.txt", String(MS5611.getTemperature(), 2).c_str());
+  appendFile(SD, "/pressure.txt", "\t");
+  appendFile(SD, "/pressure.txt", String(MS5611.getPressure(), 2).c_str());
+  appendFile(SD, "/pressure.txt", "\n");
+
+}
