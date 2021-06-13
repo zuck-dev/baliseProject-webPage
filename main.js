@@ -14,6 +14,7 @@ let pic = document.querySelectorAll('.imgGrid');
 let audio = document.querySelectorAll('.trace');
 var path = document.querySelectorAll('#main-container > path');
 var spinText = document.querySelectorAll('collapsible');
+const titrePorto = document.querySelectorAll('.titrePorto')
 
 if (navigator.appVersion.indexOf("Chrome/") != -1) {
   spinText.forEach((item, i) => {
@@ -69,8 +70,8 @@ for (let i = 0; i < coll.length; i++) {
 
 let camera, scene, renderer;
 
-const container = document.querySelector('.view');
-const showBtn = document.querySelector('.show');
+const showBtn = document.querySelectorAll('.show');
+var container = null;
 let model = null;
 
 function init(container, model) {
@@ -154,34 +155,46 @@ function render() {
 
 }
 
-showBtn.onclick = function (event) {
+showBtn.forEach(item => {
+  item.onclick = function (event) {
+    container = document.querySelector(`#view${this.id.slice(5)}`);
 // TODO: cleaning btn close
-  let close3d = document.createElement('div');
-  close3d.className = "close3d";
-  close3d.onclick = function () {
-    this.style.opacity = '0.25';
-    model = null;
-    while (container.firstChild) {
-      container.removeChild(container.firstChild);
+    let close3d = document.createElement('div');
+    close3d.className = "close3d";
+    close3d.onclick = function () {
+      this.style.opacity = '0.25';
+      model = null;
+      while (container.firstChild) {
+        container.removeChild(container.firstChild);
+      }
     }
-  }
-  // NOTE: if model exist delete child of div view else create 3d scene
-  if (model) {
-    this.style.opacity = '0.25';
-    model = null;
-    while (container.firstChild) {
-      container.removeChild(container.firstChild);
-    }
-  } else {
-    container.scrollIntoView({behavior: "smooth", block: "nearest", inline: "center"});
-    this.style.opacity = '1';
-    model = this.id + '.stl';
-    init(container, model);
-    render();
-    container.appendChild(close3d);
+    // NOTE: if model exist delete child of div view else create 3d scene
+    if (model) {
+      this.style.opacity = '0.25';
+      model = null;
+      while (container.firstChild) {
+        container.removeChild(container.firstChild);
+      }
+      titrePorto.forEach(item => {
+        item.style.zIndex = '0';
+      });
+    } else {
+      container.scrollIntoView({behavior: "smooth", block: "nearest", inline: "center"});
+      this.style.opacity = '1';
+      model = this.id + '.stl';
+      init(container, model);
+      render();
+      container.appendChild(close3d);
+      titrePorto.forEach(item => {
+        item.style.zIndex = '-1';
+      });
 
+
+    }
   }
-}
+
+});
+
 
 pic.forEach(item => {
   item.childNodes.forEach(element => {
