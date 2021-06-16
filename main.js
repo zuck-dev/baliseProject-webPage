@@ -288,18 +288,17 @@ btn.forEach(element => {
   })
 });
 
-const svg_g = document.querySelectorAll('#protoAsideA > g');
+const svg_g = document.querySelectorAll('.drawing g');
 
-var tooltiptext = document.querySelector('.tooltiptext');
+const tooltiptext = document.querySelectorAll('.tooltiptext');
 
 svg_g.forEach(item => {
   item.addEventListener("mouseenter", function(e) {
-    console.log(item.left);
     // NOTE: convert the html collection item.collection into an Array
     let childs = Array.prototype.slice.call( item.children );
-    // tooltiptext.style.left = `${e.pageX+10}px`;
-    // tooltiptext.style.top = `${e.pageY+10}px`;
-    tooltiptext.innerHTML = item.firstElementChild.textContent;
+    tooltiptext.forEach(text => {
+      text.innerHTML = item.firstElementChild.textContent;
+    });
     anime({
       targets: childs,
       easing: 'easeOutInBounce',
@@ -324,7 +323,6 @@ svg_g.forEach(item => {
   });
 });
 
-
 var animation = anime({
   targets: path,
   strokeDashoffset: [anime.setDashoffset, 0],
@@ -343,7 +341,7 @@ const tableau = fetch('assets/csvjson.json')
    .then(v => JSON.parse(v))
    .catch(err => console.log(err))
 
-tableau.then(v => console.log(v[0]))
+// tableau.then(v => console.log(v[0]))
 tableau.then(v => v.forEach(element => {
     ytemp.push(parseFloat(element.TEMP))
     ylight.push(element.resitance)
