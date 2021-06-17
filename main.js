@@ -342,33 +342,68 @@ const tableau = fetch('assets/csvjson.json')
    .catch(err => console.log(err))
 
 // tableau.then(v => console.log(v[0]))
-tableau.then(v => v.forEach(element => {
-    ytemp.push(parseFloat(element.TEMP))
-    ylight.push(element.resitance)
-    xcount.push(element.CNT)
-}));
+// tableau.then(v => v.forEach(element => {
+//     ytemp.push(parseFloat(element.TEMP))
+//     y.push(element.resitance)
+//     xcount.push(element.CNT)
+// }));
 
 /////////
 
-const ytemp = [];
-const ylight = [];
 const xcount = [];
+var y = [];
 
+const DataChart = {
+  proto2: {
+    light: {
+      data: y,
+      title: 'Lum',
+      min: 2000,
+      max: 4096
+    },
+    pressure: {
+      data: y,
+      title: 'pres',
+      min: 1029,
+      max: 1038
+    }
+
+  },
+  proto3: {
+
+  }
+}
+
+const selectChart = document.querySelector('select');
 var ctx = document.getElementById('chart').getContext('2d');
-var ctx1 = document.getElementById('chart1').getContext('2d');
+var myChart = null;
+// var ctx1 = document.getElementById('chart1').getContext('2d');
 
-chartIt();
+selectChart.onchange = function(e){
+  console.log(e.target.value);
+  let dataSet = DataChart[selectChart.name][e.target.value];
 
-async function chartIt() {
+  tableau.then(v => v.forEach(element => {
+      y.push(element[e.target.value])
+      xcount.push(parseFloat(element.CNT))
+  }));
+
+  if (myChart) {
+    myChart.destroy();
+  }
+
+  chartIt(dataSet);
+};
+
+async function chartIt(item) {
   await tableau;
-  console.log(ylight);
-  var myChart = new Chart(ctx, {
+  myChart = new Chart(ctx, {
       type: 'radar',
       data: {
           labels: xcount,
           datasets: [{
               label: 'light',
-              data: ylight,
+              data: item.data,
               // backgroundColor: ['rgba(255, 99, 132, 0.2)'],
               // borderColor: ['rgba(255, 99, 132, 1)'],
               // borderWidth: 1
@@ -396,8 +431,8 @@ async function chartIt() {
             pointLabels: {
               display: false
             },
-            min: 2000,
-            max: 4096
+            min: item.min,
+            max: item.max
           },
         },
         plugins: {
@@ -406,7 +441,7 @@ async function chartIt() {
           },
           title: {
             display: true,
-            text: 'Luminosité : perdiode 4h'
+            text: item.title
           },
           legend: {
             display: false
@@ -417,61 +452,61 @@ async function chartIt() {
         },
       },
   });
-  var myChart = new Chart(ctx1, {
-      type: 'radar',
-      data: {
-          labels: xcount,
-          datasets: [{
-              label: 'temperature',
-              data: ytemp,
-              // backgroundColor: ['rgba(255, 99, 132, 0.2)'],
-              // borderColor: ['rgba(255, 99, 132, 1)'],
-              // borderWidth: 1
-          }]
-      },
-      options: {
-        elements:{
-          point:{
-            pointBackgroundColor: 'rgba(148, 0, 255, 0.5)',
-            pointBorderWidth: 0,
-            pointRadius: 0,
-            pointHoverRadius: 4,
-          },
-          line:{
-            borderColor: 'rgba(148, 0, 255, 1)',
-            borderWidth: 1,
-            fill: false,
-            cubicInterpolationMode: 'default'
-          },
-        },
-        scales: {
-          r: {
-            angleLines: {
-              display: false
-            },
-            pointLabels: {
-              display: false
-            },
-            min: 0,
-            max: 20
-          },
-        },
-        plugins: {
-          datalabels: {
-            display: false
-          },
-          title: {
-            display: true,
-            text: 'Température : perdiode 4h'
-          },
-          legend: {
-            display: false
-          },
-        },
-        animations: {
-
-        },
-      },
-  });
+  // var myChart = new Chart(ctx1, {
+  //     type: 'radar',
+  //     data: {
+  //         labels: xcount,
+  //         datasets: [{
+  //             label: 'temperature',
+  //             data: ytemp,
+  //             // backgroundColor: ['rgba(255, 99, 132, 0.2)'],
+  //             // borderColor: ['rgba(255, 99, 132, 1)'],
+  //             // borderWidth: 1
+  //         }]
+  //     },
+  //     options: {
+  //       elements:{
+  //         point:{
+  //           pointBackgroundColor: 'rgba(148, 0, 255, 0.5)',
+  //           pointBorderWidth: 0,
+  //           pointRadius: 0,
+  //           pointHoverRadius: 4,
+  //         },
+  //         line:{
+  //           borderColor: 'rgba(148, 0, 255, 1)',
+  //           borderWidth: 1,
+  //           fill: false,
+  //           cubicInterpolationMode: 'default'
+  //         },
+  //       },
+  //       scales: {
+  //         r: {
+  //           angleLines: {
+  //             display: false
+  //           },
+  //           pointLabels: {
+  //             display: false
+  //           },
+  //           min: 0,
+  //           max: 20
+  //         },
+  //       },
+  //       plugins: {
+  //         datalabels: {
+  //           display: false
+  //         },
+  //         title: {
+  //           display: true,
+  //           text: 'Température : perdiode 4h'
+  //         },
+  //         legend: {
+  //           display: false
+  //         },
+  //       },
+  //       animations: {
+  //
+  //       },
+  //     },
+  // });
 
 }

@@ -209,7 +209,9 @@ textarea
   transform-box: fill-box
 .drawing
   svg
-    width: 45vw
+    width: 20vw
+    @media (max-width: 981px)
+      width: 90vw
 .tooltiptext
   top: 50px
   position: absolute
@@ -271,8 +273,8 @@ textarea
     max-width: 100%
     filter: grayscale(100%) brightness(1.2) contrast(0.8)
 .large
-  max-width: 90%
-  max-height: 90%
+  max-width: 100%
+  max-height: 100%
   margin-left: auto
   margin-right: auto
   left: 0
