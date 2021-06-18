@@ -367,6 +367,12 @@ const DataChart = {
       title: 'pres',
       min: 1029,
       max: 1038
+    },
+    temperature: {
+      data: [],
+      title: 'temp',
+      min: 0,
+      max: 20
     }
 
   },
@@ -385,7 +391,7 @@ selectChart.onchange = function(e){
   let dataSet = DataChart[selectChart.name][e.target.value];
   DataChart[selectChart.name][e.target.value].data = [];
   tableau.then(v => v.forEach(element => {
-      DataChart[selectChart.name][e.target.value].data.push(element[e.target.value])
+      DataChart[selectChart.name][e.target.value].data.push(parseFloat(element[e.target.value]))
   }));
   console.log(dataSet);
   console.log(dataSet.data);
