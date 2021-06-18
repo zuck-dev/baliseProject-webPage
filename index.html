@@ -737,16 +737,15 @@
               <span><img id="audioIMG_13" src="assets/svg/audio2/path_13.svg" alt=""><p>&thinsp;13h54</p></span>
               <span><img id="audioIMG_14" src="assets/svg/audio2/path_14.svg" alt=""><p>&thinsp;13h09</p></span>
             </div>
-            <div id="chart-wrapper">
-            <canvas id="chart"></canvas>
-            <!-- <canvas id="chart1"></canvas> -->
             <label for="proto2"> choose</label>
-            <select class="" name="proto2">
-              <option value="b">b</option>
-              <option value="pressure">p</option>
-              <option value="light">Luminosité</option>
-            </select>
-          </div>
+            <div id="chart-wrapper">
+              <select class="" name="proto2">
+                <option value="b">b</option>
+                <option value="pressure">p</option>
+                <option value="light">Luminosité</option>
+              </select>
+              <canvas id="chart"></canvas>
+            </div>
           </section>
         </div>
 
@@ -769,7 +768,7 @@
                  </text>
                 </svg>
               </button>
-              <p contenteditable="true" class="content">Pour cette second version sachant que de l'eau était parvenue a pénétrer dans la première version, j'ai alors décider de modifier la forme pour parvenir a un assemblage plus pratique et surtout plus étanche. Ce prototype est donc composée d'uniquement deux partie connecter a l'aide de vis qui viennent serrez un joint en silicone de salle de bains injecter dans une rainure sur tout le périmètre reliant les deux partie de la balise.</p>
+              <p contenteditable="true" class="content">Pour ce dernier prototype j'ai realiser deux version différente la premiere m'a permi de comprendre que l'eau s'infilrait a travers les différente couche de l'impression 3d. Pour la version final j'ai donc decider de couvrir toute l'impression 3d de resine pour rendre etanche le crops de la balise.</p>
             </div>
             <button id="model3" class="show" type="button" name="button">
               <img src="assets/svg/cube.svg" alt="">
@@ -795,7 +794,7 @@
                  </text>
                 </svg>
               </button>
-              <p contenteditable="true" class="content">l’électronique est le même que sur le premier prototype, avec une modification du code pour éviter la suppression de fichier. </p>
+              <p contenteditable="true" class="content">Le programme de ce prototype est bien plus simple notament du au faite qu'il n'y a plus de microphone. J'ai realisé un circuit compact qui permet d'acuillir tout les composant, le gyroscope le capteur de luminosité et le microcontroleur principal.</p>
             </div>
             <span>
               <p>meme programe que pour la premiere version</p>
@@ -805,11 +804,35 @@
           </section>
 
           <section class="photos">
-
+            <div class="drp_txt">
+              <button type="button" class="collapsible">
+                <svg viewBox="0 0 100 100">
+                 <circle id="curve" cy="50" cx="50" r="25"/>
+                 <text x="0">
+                   <textPath xlink:href="#curve">
+                     eau
+                   </textPath>
+                 </text>
+                </svg>
+              </button>
+              <p contenteditable="true" class="content">Cette version de la bouée est ancré a l'aide d'un poid de peche de 1kg. les enregistrement de avec ce prototype sont sur des perdiode bien plus courtes, la mise en place du dispositif ce fait alors en le placeant directement dans l'eau, flotant a une hauteur de 1m50.</p>
+            </div>
           </section>
 
           <section class="resultat">
-
+            <div class="drp_txt">
+              <button type="button" class="collapsible">
+                <svg viewBox="0 0 100 100">
+                 <circle id="curve" cy="50" cx="50" r="25"/>
+                 <text x="0">
+                   <textPath xlink:href="#curve">
+                     eau
+                   </textPath>
+                 </text>
+                </svg>
+              </button>
+              <p contenteditable="true" class="content">Les données recupérer sont enfin utilisable, sur un enregistrement d'environ 10min j'arrive a recupére 3000 donées pour chacun des 6 capteurs du gyroscope plus les données du capteur de luminosité. Chaque groupe de donnée represent différente variations dans les mouvement de la balise sur les vague.</p>
+            </div>
           </section>
 
         </div>
