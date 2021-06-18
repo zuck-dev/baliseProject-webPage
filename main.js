@@ -341,6 +341,8 @@ const tableau = fetch('assets/csvjson.json')
    .then(v => JSON.parse(v))
    .catch(err => console.log(err))
 
+tableau.then(v => v.forEach(element => {
+    xcount.push(element.CNT)}));
 // tableau.then(v => console.log(v[0]))
 // tableau.then(v => v.forEach(element => {
 //     ytemp.push(parseFloat(element.TEMP))
@@ -351,18 +353,17 @@ const tableau = fetch('assets/csvjson.json')
 /////////
 
 const xcount = [];
-var y = [];
 
 const DataChart = {
   proto2: {
     light: {
-      data: y,
+      data: [],
       title: 'Lum',
       min: 2000,
       max: 4096
     },
     pressure: {
-      data: y,
+      data: [],
       title: 'pres',
       min: 1029,
       max: 1038
@@ -382,11 +383,12 @@ var myChart = null;
 selectChart.onchange = function(e){
   console.log(e.target.value);
   let dataSet = DataChart[selectChart.name][e.target.value];
-
+  DataChart[selectChart.name][e.target.value].data = [];
   tableau.then(v => v.forEach(element => {
-      y.push(element[e.target.value])
-      xcount.push(parseFloat(element.CNT))
+      DataChart[selectChart.name][e.target.value].data.push(element[e.target.value])
   }));
+  console.log(dataSet);
+  console.log(dataSet.data);
 
   if (myChart) {
     myChart.destroy();
@@ -397,6 +399,7 @@ selectChart.onchange = function(e){
 
 async function chartIt(item) {
   await tableau;
+  console.log(item.title);
   myChart = new Chart(ctx, {
       type: 'radar',
       data: {
