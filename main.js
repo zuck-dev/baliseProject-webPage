@@ -213,10 +213,12 @@ pic.forEach(item => {
       // NOTE: on clik on small img if do not exist do else do
       if (!document.querySelector('.large')) {
         assemblage.insertBefore(img, section);
+        img.scrollIntoView({behavior: "smooth", block: "nearest", inline: "center"});
         section.style.filter = 'blur(10px)';
-        document.body.style.overflow = 'hidden';
+        setTimeout(function () {
+          document.body.style.overflow = 'hidden';
+        }, 1000);
         // document.querySelector('.imgGrid').style.width = '75%';
-        img.scrollIntoView({behavior: "smooth", block: "start", inline: "center"});
 
       } else {
         assemblage.removeChild(document.querySelector('.large'));
@@ -336,21 +338,12 @@ var animation = anime({
 
 getInScreen(animation.play, "#main-container")
 
-const tableau = fetch('assets/csvjson.json')
+const tableau = fetch('assets/proto2.json')
    .then(tableau => tableau.text())
    .then(v => JSON.parse(v))
    .catch(err => console.log(err))
 
-tableau.then(v => v.forEach(element => {
-    xcount.push(element.CNT)}));
-// tableau.then(v => console.log(v[0]))
-// tableau.then(v => v.forEach(element => {
-//     ytemp.push(parseFloat(element.TEMP))
-//     y.push(element.resitance)
-//     xcount.push(element.CNT)
-// }));
-
-/////////
+tableau.then(v => v.forEach(element => {xcount.push(element.CNT)}));
 
 const xcount = [];
 
@@ -384,10 +377,9 @@ const DataChart = {
 const selectChart = document.querySelector('select');
 var ctx = document.getElementById('chart').getContext('2d');
 var myChart = null;
-// var ctx1 = document.getElementById('chart1').getContext('2d');
 
 selectChart.onchange = function(e){
-  console.log(e.target.value);
+  console.log(e.target.name);
   let dataSet = DataChart[selectChart.name][e.target.value];
   DataChart[selectChart.name][e.target.value].data = [];
   tableau.then(v => v.forEach(element => {
