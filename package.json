@@ -2,7 +2,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build",
+    "build": "vite build --target=es2020",
     "serve": "vite preview"
   },
   "devDependencies": {

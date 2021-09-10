@@ -8,7 +8,7 @@ import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js';
 
-console.log('Hello World');
+console.log('hello friend');
 
 let pic = document.querySelectorAll('.imgGrid');
 let audio = document.querySelectorAll('.trace');
@@ -18,7 +18,7 @@ const titrePorto = document.querySelectorAll('.titrePorto')
 
 if (navigator.appVersion.indexOf("Chrome/") != -1) {
   spinText.forEach((item, i) => {
-    console.log(item);
+    // console.log(item);
   });
 
 }
@@ -40,7 +40,7 @@ function typeWriter(txt, target) {
 function getInScreen(func, target, ...args) {
   var observer = new IntersectionObserver(function(entries) {
   	if(entries[0].isIntersecting === true){
-      console.log('Element is fully visible in screen');
+      // console.log('Element is fully visible in screen');
       func(...args);
     };
   }, { threshold: [0.5] });
@@ -76,7 +76,7 @@ let model = null;
 
 function init(container, model) {
 
-  console.log(model);
+  // console.log(model);
 	renderer = new THREE.WebGLRenderer( { antialias: true, alpha: true } );
 	// renderer.setPixelRatio( window.devicePixelRatio );
 	// renderer.setSize( window.innerWidth/2, window.innerHeight/2 );
@@ -108,7 +108,7 @@ function init(container, model) {
 
 
   const loader = new STLLoader();
-  loader.load( './assets/stl/'+model, function ( geometry ) {
+  loader.load( 'stl/'+model, function ( geometry ) {
 
     const material = new THREE.MeshStandardMaterial( { color: 0x2b2b2b, roughness: 0.8, metalness: 0, } );
     const mesh = new THREE.Mesh( geometry, material );
@@ -204,12 +204,14 @@ pic.forEach(item => {
       let img = document.createElement('img');
       let gridN = section.className.slice(8);
       let imgCount = section.childElementCount;
-      console.log(gridN);
-      img.src = 'assets/img'+gridN+'/'+element.attributes.src.value.slice(12);
-      console.log(img.src);
+      // console.log(gridN);
+      // console.log(element.attributes.src.value.slice(8, 9));
+      // img.src = 'assets/img'+gridN+'/'+element.attributes.src.value.slice(12);
+      img.src = 'img'+gridN+'/'+element.attributes.src.value.slice(8, 9)+'.jpg';
+      // console.log(img.src);
       img.className = 'large';
-      console.log(section);
-      console.log(assemblage);
+      // console.log(section);
+      // console.log(assemblage);
       // NOTE: on clik on small img if do not exist do else do
       if (!document.querySelector('.large')) {
         assemblage.insertBefore(img, section);
@@ -230,9 +232,9 @@ pic.forEach(item => {
       // NOTE: on click on large image
       img.onclick = function (){
         i<imgCount ? i++ : i=1;
-        img.src = 'assets/img'+gridN+'/'+i+'.jpg';
+        img.src = 'img'+gridN+'/'+i+'.jpg';
         assemblage.replaceChild(img, img);
-        console.log(i);
+        // console.log(i);
       };
     })
   });
@@ -242,7 +244,7 @@ audio.forEach((item, i) => {
   let audio_trace = Array.prototype.slice.call( item.children );
   audio_trace.forEach(element => {
     element.addEventListener('click', function() {
-      let n = element.firstChild.attributes.src.value.slice(23, -4);
+      let n = element.firstChild.id.slice(9);
       let sound = document.getElementById('audio_'+n);
       if (sound.paused == true) {
         sound.play();
@@ -277,8 +279,8 @@ let btn = document.querySelectorAll('.codeBTN');
 
 btn.forEach(element => {
   element.addEventListener('click', function() {
-    console.log(element.value);
-    fetch(`assets/code/${element.value}.txt`)
+    // console.log(element.value);
+    fetch(`code/${element.value}.txt`)
       .then(response => response.text())
       .then(data => {
         element.parentNode.nextElementSibling.value = data;
@@ -338,10 +340,10 @@ var animation = anime({
 
 getInScreen(animation.play, "#main-container")
 
-const tableau = fetch('assets/proto2.json')
+const tableau = fetch('proto2.json')
    .then(tableau => tableau.text())
    .then(v => JSON.parse(v))
-   .catch(err => console.log(err))
+   // .catch(err => console.log(err))
 
 tableau.then(v => v.forEach(element => {xcount.push(element.CNT)}));
 
@@ -379,14 +381,14 @@ var ctx = document.getElementById('chart').getContext('2d');
 var myChart = null;
 
 selectChart.onchange = function(e){
-  console.log(e.target.name);
+  // console.log(e.target.name);
   let dataSet = DataChart[selectChart.name][e.target.value];
   DataChart[selectChart.name][e.target.value].data = [];
   tableau.then(v => v.forEach(element => {
       DataChart[selectChart.name][e.target.value].data.push(parseFloat(element[e.target.value]))
   }));
-  console.log(dataSet);
-  console.log(dataSet.data);
+  // console.log(dataSet);
+  // console.log(dataSet.data);
 
   if (myChart) {
     myChart.destroy();
@@ -397,7 +399,7 @@ selectChart.onchange = function(e){
 
 async function chartIt(item) {
   await tableau;
-  console.log(item.title);
+  // console.log(item.title);
   myChart = new Chart(ctx, {
       type: 'radar',
       data: {
